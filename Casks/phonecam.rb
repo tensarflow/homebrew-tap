@@ -12,13 +12,15 @@ cask "phonecam" do
 
   app "PhoneCam.app"
 
-  uninstall quit:   "com.arteq.PhoneCam",
-            delete: "/Library/Audio/Plug-Ins/HAL/PhoneCamMic.driver"
+  uninstall quit: "com.arteq.PhoneCam"
 
-  zap trash: [
-    "~/Library/Logs/PhoneCam.log",
-    "~/Library/Preferences/com.arteq.PhoneCam.plist",
-  ]
+  # Upgrades also run `uninstall`, so the microphone driver (installed by the app itself)
+  # is only removed by `brew uninstall --zap`.
+  zap delete: "/Library/Audio/Plug-Ins/HAL/PhoneCamMic.driver",
+      trash:  [
+        "~/Library/Logs/PhoneCam.log",
+        "~/Library/Preferences/com.arteq.PhoneCam.plist",
+      ]
 
   caveats <<~EOS
     Open PhoneCam from Applications, then allow its camera in
