@@ -1,6 +1,6 @@
 cask "phonecam" do
-  version "1.0.0"
-  sha256 "01ede9e1d09a3e713a5980cb2fc4e62da67c754e8180221ffbe1ef8d49a7bc74"
+  version "1.0.1"
+  sha256 "e83d020ce0c6bf15768efc262fbac4a61ec4eca2416839c14be9544dddf3ffbc"
 
   url "https://github.com/tensarflow/PhoneCam/releases/download/v#{version}/PhoneCam-#{version}.dmg"
   name "PhoneCam"
