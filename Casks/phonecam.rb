@@ -1,6 +1,6 @@
 cask "phonecam" do
-  version "1.0.1"
-  sha256 "e83d020ce0c6bf15768efc262fbac4a61ec4eca2416839c14be9544dddf3ffbc"
+  version "1.1.0"
+  sha256 "57d9627e0b58b319cc89c828ad4b568e0e3efdb7b16a1231f85c05a7127e9e34"
 
   url "https://github.com/tensarflow/PhoneCam/releases/download/v#{version}/PhoneCam-#{version}.dmg"
   name "PhoneCam"
@@ -27,5 +27,7 @@ cask "phonecam" do
       System Settings > General > Login Items & Extensions > Camera Extensions.
     On the phone, turn on USB debugging and tap Allow when you plug it in:
       https://github.com/tensarflow/PhoneCam#3-set-up-the-phone
+    For the microphone over Bluetooth, install the PhoneCam Mic app on the phone:
+      https://github.com/tensarflow/PhoneCam/releases/latest
   EOS
 end
